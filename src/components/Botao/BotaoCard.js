@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function BotaoCard({color = "#ddac70ff", title = "TxtBtnPadrao"}) {
+export default function BotaoCard({color ="#ddac70ff", title = "TxtBtnPadrao"}) {
   return (
     <View style={styles.container}>
         <TouchableOpacity style={[styles.botao, { backgroundColor: color }]}>

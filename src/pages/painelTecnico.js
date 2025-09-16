@@ -9,7 +9,7 @@ export default function PainelTecnico() {
 
       <ScrollView style={styles.container} contentContainerStyle={styles.areaPrincipal} showsVerticalScrollIndicator={false}>
         <View style={styles.descricao}>
-          <Text style={styles.title}>Painel do Técnico</Text>
+          <Text style={styles.title}>Painel Técnico</Text>
           <Text style={styles.subtitle}>Selecione uma das opções abaixo:</Text>
         </View>
 
@@ -17,7 +17,7 @@ export default function PainelTecnico() {
         <CardP titulo="Cadastrar Exame" descricao="Registre um novo exame." />
         <CardP titulo="Buscr Paciente por ID" descricao="Consulte paciente ja cadastrado." />
         <CardP titulo="Editar Dados" descricao="Atualize informações cadastradas." />
-        <CardP titulo="Sair" descricao="Encerra a sessão e voltar ao login" />
+        <CardP titulo="Sair" descricao="Encerra a sessão e voltar ao login" cor="red"/>
 
       </ScrollView>
 

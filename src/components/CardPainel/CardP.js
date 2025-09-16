@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 
 import BotaoCard from "../Botao/BotaoCard";
 
-export default function CardP({ titulo="Titulo", descricao="Descrição" }) {
+export default function CardP({ titulo="Titulo", descricao="Descrição", cor="#6fa29e"}) {
   return (
 
     <View style={styles.cardPainel}>
@@ -11,7 +11,7 @@ export default function CardP({ titulo="Titulo", descricao="Descrição" }) {
         <View style={styles.card}>
             <Text style={styles.tituloCard}>{titulo}</Text>
             <Text style={styles.textoCard}>{descricao}</Text>
-            <BotaoCard title="Confirmar"/> 
+            <BotaoCard title="Confirmar" color={cor}/> 
        </View>
 
     </View>
