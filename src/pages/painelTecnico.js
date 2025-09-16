@@ -17,7 +17,7 @@ export default function PainelTecnico() {
         <CardP titulo="Cadastrar Exame" descricao="Registre um novo exame." />
         <CardP titulo="Buscr Paciente por ID" descricao="Consulte paciente ja cadastrado." />
         <CardP titulo="Editar Dados" descricao="Atualize informações cadastradas." />
-        <CardP titulo="Sair" descricao="Encerra a sessão e voltar ao login" cor="red"/>
+        <CardP titulo="Sair" descricao="Encerra a sessão e voltar ao login" cor="#e13636ff"/>
 
       </ScrollView>
 
