@@ -1,143 +1,57 @@
-import React from "react";
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, ScrollView, StyleSheet, SafeAreaView } from "react-native";
+
+import CardP from "../components/CardPainel/CardP";
 
 export default function PainelTecnico() {
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.areaPrincipal}>
-      <View style={styles.descricao}>
-        <Text style={styles.title}>Painel do Técnico</Text>
-        <Text style={styles.subtitle}>Selecione uma das opções abaixo:</Text>
-      </View>
+    
+  <SafeAreaView style={styles.safeArea} >
 
-      <View style={styles.opcoesPainel}>
-        {/* Card 1 */}
-        <View style={styles.card}>
-          <Text style={styles.tituloCard}>Cadastrar Paciente</Text>
-          <Text style={styles.textoCard}>Adicione um novo paciente ao sistema.</Text>
-          <TouchableOpacity
-            style={[styles.botao, styles.cadastrarPaciente]}
-          >
-            <Text style={styles.textoBotao}>Acessar</Text>
-          </TouchableOpacity>
+      <ScrollView style={styles.container} contentContainerStyle={styles.areaPrincipal} showsVerticalScrollIndicator={false}>
+        <View style={styles.descricao}>
+          <Text style={styles.title}>Painel do Técnico</Text>
+          <Text style={styles.subtitle}>Selecione uma das opções abaixo:</Text>
         </View>
 
-        {/* Card 2 */}
-        <View style={styles.card}>
-          <Text style={styles.tituloCard}>Cadastrar Exame</Text>
-          <Text style={styles.textoCard}>Registre um novo exame realizado.</Text>
-          <TouchableOpacity
-            style={[styles.botao, styles.cadastrarExame]}
-          >
-            <Text style={styles.textoBotao}>Acessar</Text>
-          </TouchableOpacity>
-        </View>
+        <CardP titulo="Cadastrar Paciente" descricao="Adicione um novo paciente ao sistema." />
+        <CardP titulo="Cadastrar Exame" descricao="Registre um novo exame." />
+        <CardP titulo="Buscr Paciente por ID" descricao="Consulte paciente ja cadastrado." />
+        <CardP titulo="Editar Dados" descricao="Atualize informações cadastradas." />
+        <CardP titulo="Sair" descricao="Encerra a sessão e voltar ao login" />
 
-        {/* Card 3 */}
-        <View style={styles.card}>
-          <Text style={styles.tituloCard}>Buscar Paciente por ID</Text>
-          <Text style={styles.textoCard}>Consulte paciente já cadastrados.</Text>
-          <TouchableOpacity
-            style={[styles.botao, styles.buscarPaciente]}
-          >
-            <Text style={styles.textoBotao}>Acessar</Text>
-          </TouchableOpacity>
-        </View>
+      </ScrollView>
 
-        {/* Card 4 */}
-        <View style={styles.card}>
-          <Text style={styles.tituloCard}>Editar Dados</Text>
-          <Text style={styles.textoCard}>Atualize informações cadastradas.</Text>
-          <TouchableOpacity
-            style={[styles.botao, styles.editar]}
-          >
-            <Text style={styles.textoBotao}>Acessar</Text>
-          </TouchableOpacity>
-        </View>
-
-        {/* Card Logout */}
-        <View style={[styles.card, styles.sair]}>
-          <Text style={[styles.tituloCard, styles.tituloSair]}>Sair</Text>
-          <Text style={styles.textoCard}>Encerrar sessão e voltar ao login.</Text>
-          <TouchableOpacity
-            style={[styles.botao, styles.botaoSair]}
-          >
-            <Text style={styles.textoBotao}>Logout</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-    </ScrollView>
+   </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#B1EEBE", 
+    backgroundColor: "#ffffffff", 
   },
-  areaPrincipal: {
-    padding: 20, //margem dos cards com a borda
+
+   safeArea: {
+    flex: 1 ,
+    backgroundColor: "#ffffffff", 
+    alignItems: 'center',
+    justifyContent: 'center',
   },
+
   descricao: { 
     marginBottom: 20,
-    alignItems: "center" // deixei centralizado mas poderia ser left também
+    alignItems: "center", // deixei  os texto centralizado
+    //marginTop: 20, //Margem do topo caso estivesse fora da SafeAreaView 
   },
-  title: {
+
+  title:{
     fontSize: 20,
-    fontWeight: "bold",
-    marginBottom: 5,
+    fontWeight: "bold", // deixa destacado 
+    marginBottom: 5, // espaço do titulo para o subtitulo
   },
-  subtitle: {
+
+   subtitle: {
     fontSize: 16,
   },
-  opcoesPainel: {
-    width: "100%", //largura dos cards
-  },
-  card: {
-    backgroundColor: "#fff",
-    borderRadius: 10,
-    padding: 20,
-    marginBottom: 15,
-    alignItems: "center",
-  },
-  tituloCard: { 
-    fontSize: 16,
-    fontWeight: "bold",
-    marginBottom: 8,
-    textAlign: "center",
-  },
-  textoCard: {
-    marginBottom: 15,
-  },
-  botao: {  //Estilo dos Botoes dos Cards
-    paddingVertical: 10,
-    borderRadius: 8,
-    width: "100%",
-    alignItems: "center", //alinha o texto de dentro do botao
-  },
-  textoBotao: {
-    color: "#fff",
-    fontWeight: "bold",
-  },
-  cadastrarPaciente: { 
-    backgroundColor: "#0d6efd",
-  },
-  cadastrarExame: {
-    backgroundColor: "#198754",
-  },
-  buscarPaciente: {
-    backgroundColor: "#ffc107",
-  },
-  editar: {
-    backgroundColor: "#0dcaf0",
-  },
-  sair: {
-    borderWidth: 2,//linha da borda
-    borderColor: "#dc3545", //cor da borda do card de sair
-  },
-  tituloSair: { //Titolo do botao de sair 
-    color: "#dc3545",
-  },
-  botaoSair: { //cor do botao de sair
-    backgroundColor: "#dc3545",
-  },
+  
 });
