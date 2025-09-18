@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function BotaoCard({color ="#ddac70ff", title = "TxtBtnPadrao"}) {
+export default function BotaoCard({color ="#ddac70ff", title = "txtBtnPadaro"}) {
   return (
     <View style={styles.container}>
         <TouchableOpacity style={[styles.botao, { backgroundColor: color }]}>
@@ -14,7 +14,8 @@ export default function BotaoCard({color ="#ddac70ff", title = "TxtBtnPadrao"}) 
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    //flex: 1,  estava dando um espaço muito grande na tela do form
+    margin:15,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius:10

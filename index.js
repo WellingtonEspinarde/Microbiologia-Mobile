@@ -1,8 +1,11 @@
 import { registerRootComponent } from 'expo';
 
-//import App from './App';
+
 import PainelTecnico from './src/pages/painelTecnico';
+import CadastroPaciente from './src/pages/cadastroPaciente';
+
 //import CardP from './src/components/CardPainel/CardP';
+
 
 
 // registerRootComponent calls AppRegistry.registerComponent('main', () => App);
@@ -10,8 +13,9 @@ import PainelTecnico from './src/pages/painelTecnico';
 // the environment is set up appropriately
 
 
- registerRootComponent(PainelTecnico);
+ //registerRootComponent(PainelTecnico);
  //registerRootComponent(BotaoCard);
  //registerRootComponent(CardP);
+ registerRootComponent(CadastroPaciente);
  
 
