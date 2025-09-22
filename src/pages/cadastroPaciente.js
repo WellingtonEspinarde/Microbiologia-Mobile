@@ -8,7 +8,7 @@ export default function CadastroPaciente() {
     <SafeAreaView style={styles.container}>
 
         <View style={styles.title}>
-            <Text style={styles.titulo}>Cadastro de Técnicos</Text>
+            <Text style={styles.titulo}>Cadastro Paciente</Text>
         </View>
 
         <View style={styles.formulario}>

@@ -1,30 +1,23 @@
-import React from 'react';
-import { View, StyleSheet, Text, SafeAreaView } from "react-native";
+import { StyleSheet, View, Text,  } from "react-native";
+
 
 
 export default function CadastroTecnico(){
     return(
 
-        <View style={styles.container}>
-            <Text style={styles.title}>Cadastro Do Técnico</Text>
+        <View style= {style.container}>
+            <Text>TESTE 1  2 3</Text>
         </View>
-
-
     )
 }
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#B1EEBE',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 25,
-    fontWeight: "bold",
-    color: "#333",
+const style = StyleSheet.create({
+    container: {
+        justifyContent:'center',
+        alignItems: 'center',
+        flex: 1
+    }
+})
 
-  },
-});
+

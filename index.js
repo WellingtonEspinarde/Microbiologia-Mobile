@@ -1,16 +1,16 @@
 import { registerRootComponent } from 'expo';
+import cardId from './src/components/CardPainel/cardId';
+
 
 
 //import PainelTecnico from './src/pages/painelTecnico';
 //import CadastroPaciente from './src/pages/cadastroPaciente';
-import CadastroTecnico from './src/pages/cadastroTecnico'
-
-
-
-
-
-
+//import Card2 from './src/components/CardPainel/Card2';
 //import CardP from './src/components/CardPainel/CardP';
+
+
+
+
 
 
 
@@ -19,7 +19,7 @@ import CadastroTecnico from './src/pages/cadastroTecnico'
 // the environment is set up appropriately
 
 
- registerRootComponent(CadastroTecnico);
+ registerRootComponent(cardId);
  //registerRootComponent(BotaoCard);
  //registerRootComponent(CardP);
 // registerRootComponent(CadastroPaciente);
