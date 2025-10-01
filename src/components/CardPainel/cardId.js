@@ -1,5 +1,5 @@
-import { View, StyleSheet, Text } from "react-native";
-import { TextInput } from "react-native-web";
+import { View, StyleSheet, Text, TextInput } from "react-native";
+//import { TextInput } from "react-native-web";
 import BotaoCard from "../Botao/BotaoCard";
 
 

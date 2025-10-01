@@ -4,7 +4,8 @@ import cardId from './src/components/CardPainel/cardId';
 
 
 //import PainelTecnico from './src/pages/painelTecnico';
-//import CadastroPaciente from './src/pages/cadastroPaciente';
+import CadastroPaciente from './src/pages/cadastroPaciente';
+import Login from './src/pages/Login';
 //import Card2 from './src/components/CardPainel/Card2';
 //import CardP from './src/components/CardPainel/CardP';
 
@@ -19,9 +20,10 @@ import cardId from './src/components/CardPainel/cardId';
 // the environment is set up appropriately
 
 
- registerRootComponent(cardId);
+ //registerRootComponent(cardId);
  //registerRootComponent(BotaoCard);
  //registerRootComponent(CardP);
-// registerRootComponent(CadastroPaciente);
+//registerRootComponent(CadastroPaciente);
+registerRootComponent(Login);
  
 

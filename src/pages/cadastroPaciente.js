@@ -1,7 +1,10 @@
 
 import { StyleSheet, Text, View, SafeAreaView, TextInput } from 'react-native';
-import BotaoCard from '../components/Botao/BotaoCard';
 
+
+
+
+import BotaoCard from '../components/Botao/BotaoCard';
 
 export default function CadastroPaciente() {
   return (
@@ -17,30 +20,29 @@ export default function CadastroPaciente() {
         <Text style={styles.descricao}>Nome Completo</Text>
         
         <TextInput style={styles.campo}
-                   placeholder="Digite seu nome completo">
-        </TextInput>
+                   placeholder="Digite seu nome completo"
+        />
 
         <Text style={styles.descricao}>CPF:</Text>
         <TextInput style={styles.campo}
-                   placeholder="Digite seu CPF">
-        </TextInput>
+                   placeholder="Digite seu CPF"
+        />
 
         <Text style={styles.descricao}>E-mail:</Text>
         <TextInput style={styles.campo}
-                   placeholder="Digite seu E-mail">
-        </TextInput>
+                   placeholder="Digite seu E-mail"
+        />
 
         <Text style={styles.descricao}>Senha:</Text>
         <TextInput style={styles.campo}
                    placeholder="Digite sua senha"
                    secureTextEntry // deixa o campo como senha
-                   >
-        </TextInput>
+        />
 
         <Text style={styles.descricao}>Ano Letivo:</Text>
         <TextInput style={styles.campo}
-                   placeholder="Digite seu nome completo">
-        </TextInput>
+                   placeholder="Digite seu nome completo"
+        />
         </View>
         
         <View>
