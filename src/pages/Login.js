@@ -2,12 +2,9 @@
 import { StyleSheet, Text, View, TextInput, SafeAreaView } from 'react-native';
 import React, { useState } from "react";
 
-//Colocar um icone antes do "Bem Vindo"
-//Colocar navegaçao Stack
-
 import BotaoCard from '../components/Botao/BotaoCard';
 
-export default function Login() {
+export default function Login({ navigation }) {
 
   //cria duas variáveis de estado uma para guardar o e-mail e outra para a senha
   const [email, setEmail] = useState("");
@@ -18,9 +15,9 @@ export default function Login() {
   function fazerLogin() {
   if (email === "" || senha === "") {
     alert("Preencha todos os campos!");
-  } else if (email === "teste" && senha === "1234") {
+  } else if (email === "Teste" && senha === "1234") {
     alert("Login realizado com sucesso!");
-    // navigation.navigate("PainelTecnico"); // depois usa isso
+     navigation.navigate('PainelTecnico');
   } else {
     alert("Email ou senha incorretos!");
   }
