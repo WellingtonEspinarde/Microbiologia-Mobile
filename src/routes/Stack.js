@@ -15,6 +15,7 @@ export default function StackRoutes() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Login'>
 
+        
         <Stack.Screen name='Login'component={Login} />
         <Stack.Screen name='PainelTecnico'component={painelTecnico} />
 
