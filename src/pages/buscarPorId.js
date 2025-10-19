@@ -1,10 +1,10 @@
 import { View, StyleSheet, Text, TextInput } from "react-native";
 import BotaoCard from '../components/Botao/BotaoCard';
-import TabNavigator from "../routes/tabRoutes";
 
 
 
-export default function buscarPorId(){
+
+export default function buscarPorId({navigation}){
 
 
 

@@ -2,7 +2,7 @@ import { View, Text, ScrollView, StyleSheet, SafeAreaView } from "react-native";
 
 import CardP from "../components/CardPainel/CardP";
 
-export default function PainelTecnico() {
+export default function PainelTecnico({navigation}) {
   return (
     
   <SafeAreaView style={styles.safeArea} >
@@ -15,7 +15,7 @@ export default function PainelTecnico() {
 
         <CardP titulo="Cadastrar Paciente" descricao="Adicione um novo paciente ao sistema." />
         <CardP titulo="Cadastrar Exame" descricao="Registre um novo exame." />
-        <CardP titulo="Buscr Paciente por ID" descricao="Consulte paciente ja cadastrado." />
+        <CardP titulo="Buscr Paciente por ID" descricao="Consulte paciente ja cadastrado." localEnvio= {() => navigation.navigate("BottomTabs")}/>
         <CardP titulo="Editar Dados" descricao="Atualize informações cadastradas." />
         <CardP titulo="Sair" descricao="Encerra a sessão e voltar ao login" cor="#e13636ff"/>
 

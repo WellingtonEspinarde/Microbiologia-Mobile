@@ -1,9 +1,7 @@
-
 import { View, Text, StyleSheet } from "react-native";
-
 import BotaoCard from "../Botao/BotaoCard";
 
-export default function CardP({ titulo="Titulo", descricao="Descrição", cor="#6fa29e"}) {
+export default function CardP({ titulo="Titulo", descricao="Descrição", cor="#6fa29e", localEnvio }) {
   return (
 
     <View style={styles.cardPainel}>
@@ -11,7 +9,7 @@ export default function CardP({ titulo="Titulo", descricao="Descrição", cor="#
         <View style={styles.card}>
             <Text style={styles.tituloCard}>{titulo}</Text>
             <Text style={styles.textoCard}>{descricao}</Text>
-            <BotaoCard title="Confirmar" color={cor}/> 
+            <BotaoCard title="Confirmar" color={cor} onPress={localEnvio}/> 
        </View>
 
     </View>
