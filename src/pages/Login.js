@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 import BotaoCard from '../components/Botao/BotaoCard';
 
+
 export default function Login({ navigation }) {
 
   //cria duas variáveis de estado uma para guardar o e-mail e outra para a senha
