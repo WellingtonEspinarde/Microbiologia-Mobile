@@ -17,7 +17,6 @@ export default function Login({ navigation }) {
   if (email === "" || senha === "") {
     alert("Preencha todos os campos!");
   } else if (email === "Teste" && senha === "1234") {
-    alert("Login realizado com sucesso!");
      navigation.navigate('PainelTecnico');
   } else {
     alert("Email ou senha incorretos!");

@@ -46,7 +46,7 @@ export default function CadastroPaciente() {
         </View>
         
         <View>
-          <BotaoCard color="#6fa29e" title='Confirmar'/>
+          <BotaoCard color="#6fa29e" title='Confirmar' />
         </View>
     
     </SafeAreaView>

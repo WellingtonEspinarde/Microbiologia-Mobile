@@ -13,11 +13,12 @@ export default function PainelTecnico({navigation}) {
           <Text style={styles.subtitle}>Selecione uma das opções abaixo:</Text>
         </View>
 
-        <CardP titulo="Cadastrar Paciente" descricao="Adicione um novo paciente ao sistema." />
+        <CardP titulo="Cadastrar Paciente" descricao="Adicione um novo paciente ao sistema." localEnvio= {() => navigation.navigate("CadastoPaciente")} />
+        <CardP titulo="Cadastrar Técnico" descricao="Adicione um novo paciente ao sistema." localEnvio= {() => navigation.navigate("CadastroTecnico")} />
         <CardP titulo="Cadastrar Exame" descricao="Registre um novo exame." />
-        <CardP titulo="Buscr Paciente por ID" descricao="Consulte paciente ja cadastrado." localEnvio= {() => navigation.navigate("BottomTabs")}/>
-        <CardP titulo="Editar Dados" descricao="Atualize informações cadastradas." />
-        <CardP titulo="Sair" descricao="Encerra a sessão e voltar ao login" cor="#e13636ff"/>
+        <CardP titulo="Buscr Paciente por ID" descricao="Consulte paciente ja cadastrado." localEnvio= {() => navigation.navigate("BuscarId")}/>
+        <CardP titulo="Editar Dados" descricao="Atualize informações cadastradas." localEnvio= {() => navigation.navigate("BuscarId")} />
+        <CardP titulo="Sair" descricao="Encerra a sessão e voltar ao login" cor="#e13636ff" localEnvio= {() => navigation.navigate("Login")}/>
 
       </ScrollView>
 
