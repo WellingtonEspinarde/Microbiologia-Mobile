@@ -15,7 +15,7 @@ export default function PainelTecnico({navigation}) {
 
         <CardP titulo="Cadastrar Paciente" descricao="Adicione um novo paciente ao sistema." localEnvio= {() => navigation.navigate("CadastoPaciente")} />
         <CardP titulo="Cadastrar Técnico" descricao="Adicione um novo paciente ao sistema." localEnvio= {() => navigation.navigate("CadastroTecnico")} />
-        <CardP titulo="Cadastrar Exame" descricao="Registre um novo exame." />
+        <CardP titulo="Cadastrar Exame" descricao="Registre um novo exame." localEnvio= {() => navigation.navigate("CadastroExame")} />
         <CardP titulo="Buscr Paciente por ID" descricao="Consulte paciente ja cadastrado." localEnvio= {() => navigation.navigate("BuscarId")}/>
         <CardP titulo="Editar Dados" descricao="Atualize informações cadastradas." localEnvio= {() => navigation.navigate("BuscarId")} />
         <CardP titulo="Sair" descricao="Encerra a sessão e voltar ao login" cor="#e13636ff" localEnvio= {() => navigation.navigate("BottomTabs")}/>

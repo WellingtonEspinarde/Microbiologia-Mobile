@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TextInput, SafeAreaView } from 'react-native';
 import React, { useState } from "react";
 
 import BotaoCard from '../components/Botao/BotaoCard';
+import { validarLogin } from "../shared/usuario/Api";
 
 
 export default function Login({ navigation }) {
@@ -12,16 +13,20 @@ export default function Login({ navigation }) {
   const [senha, setSenha] = useState("");
 
 
-  //Funçao criada para testar a tela de login
-  function fazerLogin() {
-  if (email === "" || senha === "") {
-    alert("Preencha todos os campos!");
-  } else if (email === "Teste" && senha === "1234") {
-     navigation.navigate('PainelTecnico');
-  } else {
-    alert("Email ou senha incorretos!");
+  async function fazerLogin() {
+    if (email === "" || senha === "") {
+      alert("Preencha todos os campos!");
+      return;
+    }
+
+    const isUsuarioValido = await validarLogin(email, senha);
+
+    if (isUsuarioValido) {
+      navigation.navigate('PainelTecnico');
+    } else {
+      alert("Email ou senha incorretos!");
+    }
   }
-}
 
 
   return (
