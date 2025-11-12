@@ -11,6 +11,7 @@ import CadastroPaciente from '../pages/cadastroPaciente';
 import buscarPorId from '../pages/buscarPorId';
 import cadastroExame from '../pages/cadastroExame';
 
+
 const Stack = createNativeStackNavigator();
 
 export default function StackRoutes() {
@@ -26,6 +27,8 @@ export default function StackRoutes() {
         <Stack.Screen name='CadastroTecnico'component={cadastroTecnico} />
         <Stack.Screen name='EditarDados'component={cadastroTecnico} />
         <Stack.Screen name='BuscarId'component={buscarPorId} />
+        
+        
 
       </Stack.Navigator>
     </NavigationContainer>

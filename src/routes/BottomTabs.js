@@ -19,6 +19,7 @@ export default function BottomTabs(){
                 <Tab.Screen name = "CadastroPaciente" component = {cadastroPaciente}/>
                 <Tab.Screen name = "CadastroTecnico" component = {cadastroTecnico}/>
                 <Tab.Screen name = "BuscarId" component = {buscarPorId}/>
+                
 
             </Tab.Navigator>
         
