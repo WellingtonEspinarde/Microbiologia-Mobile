@@ -56,7 +56,9 @@ const style = StyleSheet.create({
         padding: 50,
         backgroundColor: "#9acddc",
         borderRadius: 15,
-        width: '85%'
+        width: '85%',
+        borderRadius: 10,
+        borderWidth:2,
     },
     txt: {
         fontSize: 20,

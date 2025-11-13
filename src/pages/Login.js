@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
 
   login:{
-    backgroundColor:"#B1EEBE",
+    backgroundColor: "#9acddc",
     borderRadius:10,
     alignItems:'center',
     justifyContent:'center',

@@ -185,6 +185,9 @@ const styles = StyleSheet.create({
         padding: 10,
         marginBottom: 10,
         elevation: 2,
+        borderWidth: 2,
+        
+        
     },
 
     radioGroup: {

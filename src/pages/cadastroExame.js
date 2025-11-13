@@ -87,7 +87,10 @@ const style = StyleSheet.create({
         padding: 30,
         backgroundColor: "#9acddc",
         borderRadius: 15,
-        width: "90%"
+        width: "90%",
+        borderRadius: 10,
+        borderWidth:2,
+
     },
     titulo: {
         fontSize: 25,

@@ -6,10 +6,13 @@ import {cadastrarUsuario} from "../shared/usuario/Api";
 
 export default function CadastroPaciente() {
     const [nomeCompleto, setNomeCompleto] = useState("");
+    const [nomedaMae, setNomedaMae] = useState("");
+    const [telefoneContato, setTelefoneContato] = useState("");
     const [cpf, setCpf] = useState("");
     const [email, setEmail] = useState("");
-    const [senha, setSenha] = useState("");
-    const [anoLetivo, setAnoLetivo] = useState("");
+    const [dataNascimento, setDataNascimento] = useState("");
+    
+    
 
     const handleCadastrar = async () => {
         try {
@@ -36,12 +39,29 @@ export default function CadastroPaciente() {
 
             <View style={styles.formulario}>
 
+            <View style={styles.campos} >
                 <Text style={styles.descricao}>Nome Completo</Text>
                 <TextInput
                     style={styles.campo}
                     placeholder="Digite seu nome completo"
                     value={nomeCompleto}
                     onChangeText={setNomeCompleto}
+                />
+
+                <Text style={styles.descricao}>Nome da Mãe:</Text>
+                <TextInput
+                    style={styles.campo}
+                    placeholder="Digite seu nome completo"
+                    value={nomedaMae}
+                    onChangeText={setNomedaMae}
+                />
+
+                <Text style={styles.descricao}>Telefone para Contato:</Text>
+                <TextInput
+                    style={styles.campo}
+                    placeholder="Telefone"
+                    value={telefoneContato}
+                    onChangeText={setTelefoneContato}
                 />
 
                 <Text style={styles.descricao}>CPF</Text>
@@ -52,7 +72,7 @@ export default function CadastroPaciente() {
                     onChangeText={setCpf}
                 />
 
-                <Text style={styles.descricao}>E-mail</Text>
+                <Text style={styles.descricao}>E-mail de Contato</Text>
                 <TextInput
                     style={styles.campo}
                     placeholder="Digite seu E-mail"
@@ -60,30 +80,24 @@ export default function CadastroPaciente() {
                     onChangeText={setEmail}
                 />
 
-                <Text style={styles.descricao}>Senha</Text>
+                <Text style={styles.descricao}>Data de Nascimento:</Text>
                 <TextInput
                     style={styles.campo}
-                    placeholder="Digite sua senha"
-                    secureTextEntry
-                    value={senha}
-                    onChangeText={setSenha}
-                />
-
-                <Text style={styles.descricao}>Ano Letivo</Text>
-                <TextInput
-                    style={styles.campo}
-                    placeholder="Ano Letivo"
-                    keyboardType="numeric"
-                    value={anoLetivo}
-                    onChangeText={setAnoLetivo}
+                    placeholder="Data de Nascimento"
+                    value={dataNascimento}
+                    onChangeText={setDataNascimento}
                 />
             </View>
+            
 
-            <View>
-                <BotaoCard color="#6fa29e" title='Confirmar' onPress={handleCadastrar}/>
+                <View>
+                    <BotaoCard color="#6fa29e" title='Confirmar' onPress={handleCadastrar}/>
+                </View>
+
             </View>
-
+            
         </SafeAreaView>
+        
 
     );
 }
@@ -94,9 +108,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: "#B1EEBE",
     },
+
     descricao: {
-        alignItems: "center",
-        marginBottom: 5
+        alignItems:"center",
+        marginBottom:5,
+        fontSize: 15,
+        fontWeight: "bold",
     },
     title: {
         fontSize: 20,
@@ -109,14 +126,21 @@ const styles = StyleSheet.create({
         margin: 20
     },
     formulario: {
-        backgroundColor: "#B1EEBE",
+        backgroundColor: "#9acddc",
         borderRadius: 10,
-        marginTop: 30,
+        borderWidth:2,
+        width: "90%",
+        
     },
-    campo: {
+    campo:{
         height: 10,
         padding: 15,
         borderWidth: 2,
         borderRadius: 10,
     },
+
+    campos: {
+        margin:30,
+    },
+    
 });

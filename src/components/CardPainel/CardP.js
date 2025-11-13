@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: "#B1EEBE",
     borderRadius: 10,
+    borderWidth:2,
     padding: 40, //tamanho do card
     alignItems: "center",
     marginBottom:15 //espaçamento de um card para o outro
