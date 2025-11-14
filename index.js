@@ -1,8 +1,8 @@
 import { registerRootComponent } from 'expo';
+//import exameBase from './src/pages/exameBase';
 
 import StackRoutes from './src/routes/Stack';
-import exameBase from './src/pages/exameBase'
-import gramPositiva from './src/pages/gramPositiva'
+//import gramPositiva from './src/pages/gramPositiva'
 
 registerRootComponent(StackRoutes);
 
