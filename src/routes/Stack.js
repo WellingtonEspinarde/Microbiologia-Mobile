@@ -10,6 +10,10 @@ import cadastroTecnico from '../pages/cadastroTecnico';
 import CadastroPaciente from '../pages/cadastroPaciente';
 import buscarPorId from '../pages/buscarPorId';
 import cadastroExame from '../pages/cadastroExame';
+import gramNegativo from '../pages/gramNegativo';
+import gramPositivo from '../pages/gramPositivo';
+import exameBase from '../pages/exameBase';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -27,6 +31,10 @@ export default function StackRoutes() {
         <Stack.Screen name='CadastroTecnico'component={cadastroTecnico} />
         <Stack.Screen name='EditarDados'component={cadastroTecnico} />
         <Stack.Screen name='BuscarId'component={buscarPorId} />
+        <Stack.Screen name='ExameBase' component={exameBase}/>
+        <Stack.Screen name='GramPositivo' component={gramPositivo}/>
+        <Stack.Screen name='GramNegativo' component={gramNegativo}/>
+        
         
         
 

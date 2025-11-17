@@ -2,15 +2,32 @@ import {useState} from "react";
 import { View, Text, StyleSheet, TextInput,} from 'react-native';
 import { RadioButton } from 'react-native-paper';
 import BotaoCard from '../components/Botao/BotaoCard';
-import RadioButtonGroup from "react-native-paper/lib/typescript/components/RadioButton/RadioButtonGroup";
+import { useNavigation } from "@react-navigation/native";
 
 
 
-export default function exameBase() {
 
-  
+export default function ExameBase() {
+const navigation = useNavigation();
+
+const [meioCultura, setMeioCultura] = useState(null);
+const [exame, setExame] = useState('');
+const [gram, setGram] = useState(null);
 
 
+function salvarDados(){
+
+    if (!gram) {
+        alert("Selecione Gram Positivo ou Negativo")
+        return;
+    }
+
+    if (gram === 'positivo'){
+        navigation.navigate('gramPositivo');
+    }else {
+      navigation.navigate('gramNegativo');
+    }
+}
 
   return (
     <View style={styles.container}>
@@ -18,47 +35,65 @@ export default function exameBase() {
 
         <View style={styles.card}> 
             <View>
-
                 <Text style = {styles.text}>Meio de Cultura Utilizado:</Text>
               
-                
                 <View style = {styles.Radius}>
-                  <Text  style = {styles.text}>MacConkey:</Text>
-                  <RadioButton
-                    value='Select'
-                  />
-                  <Text  style = {styles.text}>CLED:</Text>
-                  <RadioButton
-                    value='Select'
-                  />
-                  <Text  style = {styles.text}>Ágar Manitol:</Text>
-                  <RadioButton
-                    value='Select'
-                  />
+                  <View>
+                    <Text  style = {styles.text}>MacConkey:</Text>
+                    <RadioButton
+                      value="macconkey"
+                      status={meioCultura === "macconkey" ? "checked" : "unchecked"}
+                      onPress={() => setMeioCultura ("macconkey")}
+                    />
+                  </View>
+
+                  <View>
+                    <Text  style = {styles.text}>CLED:</Text>
+                    <RadioButton
+                      value='cled'
+                      status = {meioCultura === "cled" ? "checked" : "unchecked"}
+                      onPress={() => setMeioCultura ("cled")}
+                    />
+                  </View> 
+
+                  <View> 
+                    <Text  style = {styles.text}>Ágar Manitol:</Text>
+                    <RadioButton
+                      value='manitol'
+                      status= {meioCultura === "manitol" ? "checked" : "unchecked"}
+                      onPress={() => setMeioCultura ("manitol")}
+                    />
+                  </View>
                 </View>
             </View>
 
             <View>
                 <Text style={styles.text}>Tipo de Amostra:</Text>
-                <TextInput style = {styles.barra}/>
+                <TextInput style = {styles.barra} 
+                value= {exame} 
+                onChangeText={setExame}/>
             </View>
 
             <View style={{alignItems: 'center'}}>
             <View style = {styles.Radius}>
                 <Text  style = {styles.text}>Gram Positvo:</Text>
                   <RadioButton
-                    value='Select'
+                    value='positivo'
+                    status={gram === "positivo" ? "checked" : "unchecked"}
+                    onPress={() => setGram("positivo")}
                   />
 
                   <Text  style = {styles.text}>Gram Negativo:</Text>
                   <RadioButton
-                    value='Select'
+                    value='negativo'
+                    status={gram === "negativo" ? "checked" : "unchecked"}
+                    onPress={() => setGram ("negativo")}
                   />  
                 </View>
               </View>
             
 
-            <BotaoCard color='green' title='Salvar'/>
+            <BotaoCard color='green' title='Salvar' onPress={salvarDados}/>
          </View>
       
     </View>

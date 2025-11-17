@@ -4,7 +4,7 @@ import { View, StyleSheet, Text, SafeAreaView, TextInput, ScrollView } from "rea
 import { RadioButton } from 'react-native-paper';  // importando o componente RadioButton da biblioteca externa react-native-paper, botões de seleção "positivo" e "negativo"
 import BotaoCard from '../components/Botao/BotaoCard';
 
-export default function gramPositiva() {
+export default function gramPositivo() {
 
     return (
         <SafeAreaView style={styles.container}>
