@@ -21,7 +21,7 @@ const Stack = createNativeStackNavigator();
 export default function StackRoutes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Login' >
+      <Stack.Navigator initialRouteName='ExameBase' >
 
         <Stack.Screen name='BottomTabs'component={BottomTabs}/>
         <Stack.Screen name='Login'component={Login} />
@@ -31,9 +31,11 @@ export default function StackRoutes() {
         <Stack.Screen name='CadastroTecnico'component={cadastroTecnico} />
         <Stack.Screen name='EditarDados'component={cadastroTecnico} />
         <Stack.Screen name='BuscarId'component={buscarPorId} />
+
+
         <Stack.Screen name='ExameBase' component={exameBase}/>
         <Stack.Screen name='GramPositivo' component={gramPositivo}/>
-        <Stack.Screen name='GramNegativo' component={gramNegativo}/>
+        <Stack.Screen name='GramNegativo' component={gramNegativo}/> 
         
         
         

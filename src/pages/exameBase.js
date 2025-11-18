@@ -4,14 +4,11 @@ import { RadioButton } from 'react-native-paper';
 import BotaoCard from '../components/Botao/BotaoCard';
 import { useNavigation } from "@react-navigation/native";
 
-
-
-
 export default function ExameBase() {
 const navigation = useNavigation();
 
 const [meioCultura, setMeioCultura] = useState(null);
-const [exame, setExame] = useState('');
+const [exame, setExame] = useState(null);
 const [gram, setGram] = useState(null);
 
 
@@ -20,25 +17,29 @@ function salvarDados(){
     if (!gram) {
         alert("Selecione Gram Positivo ou Negativo")
         return;
-    }
+    }  
 
-    if (gram === 'positivo'){
-        navigation.navigate('gramPositivo');
+     if (gram === 'positivo'){
+        navigation.navigate('GramPositivo');
     }else {
-      navigation.navigate('gramNegativo');
+      navigation.navigate('GramNegativo');
     }
 }
 
   return (
     <View style={styles.container}>
-      <Text style={{fontSize: 35, padding: 15, fontWeight: 'bold'}}>Cadastro Exame:</Text>
+      <Text style={{fontSize: 35, padding: 15, fontWeight: 'bold'}}>Cadastro Exame</Text>
 
         <View style={styles.card}> 
             <View>
+
+              <View>
                 <Text style = {styles.text}>Meio de Cultura Utilizado:</Text>
-              
+              </View>
+
                 <View style = {styles.Radius}>
-                  <View>
+                  
+                  <View style = {styles.Radius1}>
                     <Text  style = {styles.text}>MacConkey:</Text>
                     <RadioButton
                       value="macconkey"
@@ -47,7 +48,7 @@ function salvarDados(){
                     />
                   </View>
 
-                  <View>
+                  <View style = {styles.Radius1}>
                     <Text  style = {styles.text}>CLED:</Text>
                     <RadioButton
                       value='cled'
@@ -56,7 +57,7 @@ function salvarDados(){
                     />
                   </View> 
 
-                  <View> 
+                  <View style = {styles.Radius1}> 
                     <Text  style = {styles.text}>Ágar Manitol:</Text>
                     <RadioButton
                       value='manitol'
@@ -64,6 +65,7 @@ function salvarDados(){
                       onPress={() => setMeioCultura ("manitol")}
                     />
                   </View>
+
                 </View>
             </View>
 
@@ -135,9 +137,14 @@ barra: {
 Radius: {
         flexDirection: "row",
         alignItems: "center",
-        gap: 2,
+        justifyContent:"center",
+        gap:2,
 
 },
+
+Radius1:{
+  flexDirection: "row",
+}
 
 });
 

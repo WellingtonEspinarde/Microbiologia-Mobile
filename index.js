@@ -15,3 +15,8 @@ registerRootComponent(StackRoutes);
 //import gramPositiva from './src/pages/gramPositiva'
 //registerRootComponent(gramPositiva);
 //StackRoutes
+
+
+
+//import ExameBase from "./src/pages/exameBase";
+//registerRootComponent(ExameBase);

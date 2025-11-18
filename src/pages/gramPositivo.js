@@ -6,6 +6,8 @@ import BotaoCard from '../components/Botao/BotaoCard';
 
 export default function gramPositivo() {
 
+    
+
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView style={styles.scrol} contentContainerStyle={styles.areaPrincipal} showsVerticalScrollIndicator={false}>
@@ -26,10 +28,12 @@ export default function gramPositivo() {
                             <Text>Positivo</Text>
                             <RadioButton
                                 value="positivo"
+                               
                             />
                             <Text>Negativo</Text>
                             <RadioButton
                                 value="negativo"
+                               
                             />
                         </View>
 
