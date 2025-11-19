@@ -21,7 +21,7 @@ const Stack = createNativeStackNavigator();
 export default function StackRoutes() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='ExameBase' >
+      <Stack.Navigator initialRouteName='Login' >
 
         <Stack.Screen name='BottomTabs'component={BottomTabs}/>
         <Stack.Screen name='Login'component={Login} />
