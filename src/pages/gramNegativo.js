@@ -211,16 +211,35 @@ export default function gramNegativo() {
                             </View>
                         </View> 
 
+
+
+                        <View style={styles.card2}>                    
                         <Text style={styles.titulo}>CAMPO ABERTO: BULAS</Text>
-                        <View style={styles.card2}>
+                        <View> 
+                           <TextInput
+                            style={styles.inputMeio}
+                            placeholder="Digite aqui..."
+                            placeholderTextColor="#999"
+                            multiline={true}
+                            textAlign="center"
+                            textAlignVertical="center"
+                           ></TextInput>
                             
+            
                         </View> 
 
-                        <Text style={styles.titulo}>ANTIBIOGRAMA:</Text>
-                        <View style={styles.card2}>
-
-                        </View>  
-                        
+                        <Text style={styles.titulo}>Identificação:</Text>
+                        <View>
+                            <TextInput
+                            style={styles.inputMeio}
+                            placeholder="Digite aqui..."
+                            placeholderTextColor="#999"
+                            multiline={true}
+                            textAlign="center"
+                            textAlignVertical="center"
+                           ></TextInput>
+                        </View> 
+                    </View>
                 </View> 
             <View/>
          </SafeAreaView>
@@ -266,6 +285,7 @@ card2: {
         borderWidth: 2,
 },
 
+
 inputs: {
         flexDirection: "row",
         alignItems: "center",
@@ -280,4 +300,26 @@ input: {
         padding: 5,
         width: "35%",
     },
+
+areaTexto: {
+  backgroundColor: "#fff", 
+  
+  
+  
+},
+
+inputMeio: {
+  backgroundColor: "#fff",
+  height: 200,               // retangular e grande
+  borderRadius: 10,
+  borderWidth: 1,
+  borderColor: "#ccc",
+  padding: 10,
+  fontSize: 16,
+  color: "#333",
+  textAlign: "center",
+  textAlignVertical: "center", 
+  
+ 
+},
 });
