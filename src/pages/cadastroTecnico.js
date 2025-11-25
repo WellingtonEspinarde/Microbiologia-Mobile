@@ -83,7 +83,6 @@ const style = StyleSheet.create({
         borderRadius: 15,
         width: "90%",
         borderWidth: 2,
-        borderRadius: 10,
     },
     TitleTec: {
         fontSize: 25,
