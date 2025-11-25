@@ -24,9 +24,9 @@ export default function cadastroTecnico() {
                 nivel: 'TECNICO',
                 anoLetivo: Number(anoLetivo)
             });
-            Alert.alert("Sucesso", "Técnico cadastrado!");
+            alert("Sucesso! Técnico cadastrado!");
         } catch (err) {
-            Alert.alert("Erro", "Falha ao cadastrar técnico");
+            alert("Erro! Não foi possível cadastrar técnico");
         }
     };
 

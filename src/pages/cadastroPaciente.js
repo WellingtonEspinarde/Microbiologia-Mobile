@@ -18,16 +18,17 @@ export default function CadastroPaciente() {
         try {
             await cadastrarUsuario({
                 nomeCompleto,
+                nomedaMae,
+                telefoneContato,
+                dataNascimento,
                 cpf,
                 email,
-                senha,
                 nivel: 'PACIENTE',
-                anoLetivo: Number(anoLetivo)
             });
 
-            Alert.alert("Sucesso", "Paciente cadastrado!");
+            alert("Sucesso! Paciente cadastrado!");
         } catch (err) {
-            Alert.alert("Erro", "Falha ao cadastrar paciente");
+            alert("Erro! Não foi possível cadastrar paciente.");
         }
     };
 
